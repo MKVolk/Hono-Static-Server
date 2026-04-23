@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'montserrat';
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yarndings12';
+  src: url('../fonts/Yarndings12-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bitcount';
+  src: url('../fonts/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+    font-family: montserrat, Helvetica, sans-serif;
+}
+
+body {
+    font-family: montserrat, Helvetica, sans-serif;
+    color: #bbbaba;
+    background-color: #000000;
+    margin: 0;
+}
+
+main{
+    padding-bottom: 5em;
+}
+
+button {
+    font-family: inherit;
+    color: #bbbaba;
+    background-color: #000000;
+    box-shadow: 0 0 10px 1px #ffffff60;
+    border: 1px solid #fff;
+    padding: 8px 16px;
+    transition: 0.2s ease;
+}
+button:hover {
+    color:#000000;
+    box-shadow: 0 0 10px 5px #ffffffcc;
+    background-color: #ffffff;
+}
+
+a {
+    color:#00ffff;
+}
+a:visited {
+    color:#ffff00;
+}
+a:hover {
+    text-shadow: 0px 0px 5px #ffffff
+}
+header {
+    font-family: montserrat, Helvetica, sans-serif;
+    border-bottom: 1px solid #fff;
+    display:flex;
+    justify-content: left;
+    flex-wrap:wrap;
+    font-size: 1rem;
+    padding: 1rem;
+}
+#pokediv {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#pokediv > h1{ /*Header Title Speciffic styling*/
+    font-family: montserrat, ubuntu, Helvetica, sans-serif;
+    font-size: 1.6em;
+}
+
+.menu {
+    border: none;
+    box-shadow: none;
+    height:fit-content;
+    font-size: 2em;
+    display:none;
+}
+
+nav{
+    align-items:center;
+    display:flex;
+    justify-content: flex-end;
+    flex-grow:1;
+    padding: 1rem;
+}
+nav button {
+    margin: 0 5px 0 5px;
+    font-size: 1em;
+}
+
+/* Content Boxes*/
+.contentGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.contentGrid > * {
+    min-width: 0;
+    overflow: hidden;
+}
+.contentFlex{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.contentFlexWrap{
+    display:flex; 
+    flex-direction: row;
+    justify-content:center; 
+    flex-wrap:wrap;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px #ffffff60;
+    border: 2px solid #bbb;
+    margin: 15px;
+    border-radius: 22px;
+    justify-content: space-between;
+}
+.entry img {
+    max-width: 100%;
+    max-height: 30rem;
+    align-self: center;
+    border-radius: 12px;
+}
+.entry .title {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+tag {
+    background-color: #808080;
+    font-size:9pt;
+    padding: 0.3em;
+    margin: 0.2em;
+    border-radius: 0.3em;
+    color: #fff;
+}
+
+footer {
+    color: #bbbaba;
+    background-color: #000;
+    box-shadow: 0 0 10px 5px #ffffff60;
+    border-top: 1px solid #fff;
+    padding:10px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+    display: flex;
+    flex-direction:row;
+    justify-content:left;
+    padding: 0;
+}
+#fttext {
+    width:fit-content;
+    padding: 0;
+    font-family: yarndings12, montserrat, sans-serif;
+}
+#stylesheets {
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    flex-grow: 10;
+    padding: 0 10px 0 0;
+}
+.stylechanger {
+    border-radius: 5px;
+    font-family: 'yarndings12', sans-serif;
+    font-size: 1em;
+    margin: 0 5px;
+    padding: 0.3em;
+}
+
+.entry .introtitle{
+    display:flex;
+    flex-direction: column;
+}
+
+.userInput{
+    background-color:#12c1c9;
+}
+
+@media screen and (max-width: 770px){
+    header{
+        flex-direction: column;
+    }
+    #pokediv {
+        background-color: #0000;
+        padding-bottom:0px; /*animation component 🐈*/
+        transition: 0.5s;
+    }
+    nav{
+        flex-direction: column;
+        padding: 0;
+        position: absolute;
+        top: 5.5em;
+        overflow-y: hidden;
+        transition: 0.5s;
+        height: 0;   /*animation component 🐈*/     
+    }
+    nav button:hover {
+        box-shadow: 0 0 1px 1px #0000;
+    }
+    #menuOpen  {     display:inline;    }
+    #menuClose {    display:none;    }
+    
+    nav button{ /*no borders*/
+        width: 90vw;
+        background-color: #0000;
+        border: none;
+        box-shadow: none;
+    }
+}
+@media screen and (min-width: 771px){
+    #menuOpen  {     display:none;    }
+    #menuClose {    display:none;    }
+}

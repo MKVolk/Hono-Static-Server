@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="media/KatIcon.ico">
+    <script>
+    (function () {
+      const theme = document.cookie.split('; ').find(row => row.startsWith('theme='))?.split('=')[1];
+      if (theme === 'dark') {
+        document.write('<link rel="stylesheet" href="css/glowy.css">');
+      } else {
+        document.write('<link rel="stylesheet" href="css/neo.css">');
+      }
+    })();
+    </script>
+    <link id="styleLink" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header> </header>
+    
+    <main>
+
+        <div class="contentGrid">
+            
+            <div class="entry">
+                <img src="media/imgp005.gif" alt="90 degree tilt planet">
+                <h3>90 degree tilt planet orbit</h3>
+                <i>04/29/2025</i>
+                <p>This is an animation of a system with a planet that has a 90 degrees tilt</p>
+            </div>
+            
+        
+        
+            <div class="entry">
+                <img src="media/img001.jpg" alt="Milaneso">
+                <h3>Trial picture post</h3>
+                <i>02/17/2025</i>
+                <p>This is an example of a modular post that has a picture in it</p>
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <footer> </footer>
+</body>
+    <script type="module" src="javascript/index.js"></script>
+</html>

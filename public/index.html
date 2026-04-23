@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Markos's personal Page</title>
+     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="media/KatIcon.ico">
+    <script>
+    (function () {
+      const theme = document.cookie.split('; ').find(row => row.startsWith('theme='))?.split('=')[1];
+      if (theme === 'dark') {
+        document.write('<link rel="stylesheet" href="css/glowy.css">');
+      } else {
+        document.write('<link rel="stylesheet" href="css/neo.css">');
+      }
+    })();
+    </script>
+    <link id="styleLink" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header> </header>
+      <main>
+        <div class="contentFlexWrap" >
+          <div class="entry" id="vapor3D" style=" width: fit-content; display: flex; align-content: center;justify-content:center; background-color: #12c1c9;">
+            <model-viewer style="min-width: 30vw; max-width: 80vw" src="media/vaporPC.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" shadow-intensity="1.22" exposure="0.67" shadow-softness="0.78" camera-orbit="45deg 55deg 4m" min-camera-orbit="auto 42deg auto" max-camera-orbit="auto 102deg auto" auto-rotate rotation-per-second="90deg" >
+            <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button" style="display:none"></button>
+            <div id="ar-prompt" style="display:none">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+            </model-viewer>
+          </div>
+          <div class="entry">
+                <div class="introtitle" id="IntroTitle">
+                    <h3>Hi! 👋</h3>
+                    <h3>My name is Markos Calderon</h3>
+                    <!--<i>02/15/2025</i>-->
+                </div>
+                <p>I am a <b>Computer Science</b> Student at University of North Florida</p>
+                <p></p>
+            </div>
+        </div>
+        <div class="contentGrid">          
+            <div class="entry">
+                <div class="title">
+                    <h3>Contact Information</h3>
+                    <i></i>
+                </div>
+                <span>
+                  <i class="fa fa-envelope"></i>
+                  <a href="mailto:markoscalderon@protonmail.com">E-mail</a>
+                <span> <br>
+                <span>
+                  <i class="fa fa-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/markoscalderoncastro/">Linkedin</a>
+                </span> <br>
+                <span>
+                  <i class="fa fa-github"></i>
+                  <a href="https://github.com/MKVolk">Github</a>
+                </span> <br>
+            </div>
+          <div class="entry">
+                <div class="title">
+                    <h3>Resume</h3>
+                    <i></i>
+                </div>
+                
+                <a href="https://github.com/MKVolk/personal/raw/refs/heads/main/media/MCalderon_Resume_D5.pdf">Download Resume</a>
+            </div>
+          
+        </div>
+    </main>
+
+    <footer> </footer>
+</body>
+  <script type="module" src="javascript/index.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+</html>

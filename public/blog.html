@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="media/KatIcon.ico">
+    <script>
+    (function () {
+      const theme = document.cookie.split('; ').find(row => row.startsWith('theme='))?.split('=')[1];
+      if (theme === 'dark') {
+        document.write('<link rel="stylesheet" href="css/glowy.css">');
+      } else {
+        document.write('<link rel="stylesheet" href="css/neo.css">');
+      }
+    })();
+    </script>
+    <link id="styleLink" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header> </header>
+    <main>
+      
+        <div class="contentFlex">
+            <div class="entry">
+                <h3>Alphabet Soup Budget Hearing</h3>
+                <i>02/19/2025 15:11</i>
+                <p>You can download the presentation here:</p>
+                <a href="https://github.com/MKVolk/personal/raw/refs/heads/main/media/as_budget_hearing.pptx" download>Download PowerPoint</a>
+                <br>
+                <a href="https://github.com/MKVolk/personal/raw/refs/heads/main/media/as_budget_hearing.pdf" download>Download PDF</a>
+            </div>
+            <div class="entry">
+                <h3>Another test, Simmilar module</h3>
+                <i>02/19/2025 15:11</i>
+                <p>This is an entry element, it has a title, date, and body.</p>
+            </div>
+    </main>
+
+    <footer> </footer>
+</body>
+    <script type="module" src="javascript/index.js"></script>
+</html>
