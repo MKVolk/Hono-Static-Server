@@ -95,7 +95,7 @@ window.menuBarClose = function () {
 };
 
 window.toggleTheme = function () {
-  toggleTheme('css/glowy.css','css/neo.css');
+  toggleTheme('static/css/glowy.css','static/css/neo.css');
 };
 
 window.overShadow = function () {

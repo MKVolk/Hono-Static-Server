@@ -53,7 +53,7 @@ export function genHeader(title) {
         return a;
     }
 
-    nav.appendChild(createNavLink("Home", "./"));
+    nav.appendChild(createNavLink("Home", ""));
     nav.appendChild(createNavLink("Blog", "blog"));
     nav.appendChild(createNavLink("Gallery", "gallery"));
     nav.appendChild(createNavLink("Projects", "projects"));
@@ -85,7 +85,7 @@ export function genFooter(route) {
     const styleBtn = document.createElement("button");
     styleBtn.className = "stylechanger";
     styleBtn.id = "css1";
-    styleBtn.setAttribute("onclick", "toggleTheme('css/glowy.css', 'css/neo.css')");
+    styleBtn.setAttribute("onclick", "toggleTheme('static/css/glowy.css', 'static/css/neo.css')");
     styleBtn.textContent = 'R';
 
     // append button to stylesheets
